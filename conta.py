@@ -13,7 +13,7 @@ class Conta:
         print("Saldo de {} do titular {}".format(self.saldo, self.titular))
 
     def deposito(self, valor):
-        self.saldo += self.valor
+        self.saldo += valor
 
     def saque(self, valor):
         self.saldo -= valor
