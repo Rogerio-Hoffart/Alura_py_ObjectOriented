@@ -1,13 +1,18 @@
 
-def cria_conta(numero, titular, saldo, limite):
-    conta = {"numero": numero, "titular": titular, "saldo":saldo, "limite":limite}
-    return conta
+class Filme:
+    def __init__(self, nome, ano, duracao):
+        self.nome = nome
+        self.ano = ano
+        self.duracao = duracao
 
-def deposita(conta, valor):
-    conta["saldo"] += valor
+class Serie:
+    def __init__(self, nome, ano, temporadas):
+        self.nome = nome
+        self.ano = ano
+        self.temporadas = temporadas
 
-def saque(conta, valor):
-    conta["saldo"] -= valor
+vingadores = Filme('vingadores - gerra infinita', 2018, 160)
+print(f'Nome: {vingadores.nome} - Ano: {vingadores.ano} - Duração: {vingadores.duracao}')
 
-def extrato(conta):
-    print("O saldo da conta é {}".format(conta["saldo"]))
+atlanta = Serie('atlanta', 2018, 2)
+print(f'Nome: {atlanta.nome} - Ano: {atlanta.ano} - Temporadas: {atlanta.temporadas}')
