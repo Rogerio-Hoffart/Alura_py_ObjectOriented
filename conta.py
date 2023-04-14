@@ -54,3 +54,11 @@ class Conta:
     @staticmethod
     def codigos_bancos():
         return {'BB': '001', 'Caixa': '104', 'Bradesco': '237'}
+
+    @property
+    def importa_base_clientes(self, arquivo):
+        arquivo = open(arquivo, "r")
+        base_clientes = []
+        for linha in arquivo:
+            base_clientes.append(linha.strip())
+        arquivo.close()
