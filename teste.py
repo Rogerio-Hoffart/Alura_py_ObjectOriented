@@ -29,8 +29,8 @@ class Serie(Programa):
 vingadores = Filme('vingadores - gerra infinita', 2018, 160)
 vingadores.dar_like()
 vingadores.dar_like()
-print(f'Nome: {vingadores.nome} - Ano: {vingadores.ano} - Duração: {vingadores.duracao} - LIKES: {vingadores.likes}')
-
 atlanta = Serie('atlanta', 2018, 2)
 atlanta.dar_like()
-print(f'Nome: {atlanta.nome} - Ano: {atlanta.ano} - Temporadas: {atlanta.temporadas} - LIKES: {atlanta.likes}')
+
+print(f'Nome: {vingadores.nome} - LIKES: {vingadores.likes}')
+print(f'Nome: {atlanta.nome} - LIKES: {atlanta.likes}')
