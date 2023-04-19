@@ -1,20 +1,21 @@
 
 class Animal:
-    def __init__(self, name):
+    def __init__(self, name, color):
         self.name = name
+        self.color = color
 
     def make_sound(self):
         pass
 
 class Dog(Animal):
     def make_sound(self):
-        return "Woof!"
+        return "Au Au Au!"
 
 class Cat(Animal):
     def make_sound(self):
-        return "Meow!"
+        return "Miau!"
 
-animals = [Dog("Fido"), Cat("Fluffy")]
+animals = [Dog("Tigor", "preto"), Dog("LILIca", "preta"), Dog("Belinha", "Branca"), Cat("Teo", "cinza"), Cat("Astolfo", "Marrom Claro")]
 
 for animal in animals:
-    print(animal.name + ": " + animal.make_sound())
+    print(animal.name +' '+ animal.color + ": " + animal.make_sound())
