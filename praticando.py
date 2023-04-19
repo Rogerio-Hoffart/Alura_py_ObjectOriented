@@ -30,6 +30,9 @@ class Shape:
 
     def area(self):
         pass
+    
+    def __str__(self):
+        return f'{self.color}'
 
 
 class Rectangle(Shape):
@@ -38,8 +41,11 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
-    def area(self):
+    def area(self) -> object:
         return self.width * self.height
+    
+    def __str__(self):
+        return f'{self.color} = {self.area()}'
 
 
 class Circle(Shape):
@@ -49,6 +55,9 @@ class Circle(Shape):
 
     def area(self):
         return 3.1415 * self.radius ** 2
+
+    def __str__(self):
+        return f'{self.color} = {self.area()}'
 
 
 class Triangle(Shape):
@@ -60,8 +69,11 @@ class Triangle(Shape):
     def area(self):
         return (self.width * self.height) / 2
 
+    def __str__(self):
+        return f'{self.color} = {self.area()}'
+
 
 shapes = [Rectangle("blue", 5, 10), Circle("red", 7), Triangle("yelow", 5, 10)]
 
 for shape in shapes:
-    print(shape.color + " " + str(shape.area()))
+    print(shape)
